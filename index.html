@@ -1,0 +1,78 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HK Studio - Key</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 90%;
+            max-width: 450px;
+            padding: 30px;
+            text-align: center;
+            background: #1d1d1d;
+            border-radius: 15px;
+        }
+
+        .key {
+            margin: 20px 0;
+            padding: 15px;
+            background: #292929;
+            border-radius: 8px;
+            font-size: 18px;
+            word-break: break-word;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: 0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>HK Studio</h1>
+
+        <p>Tu key es:</p>
+
+        <div class="key" id="key">
+            hkstudiozzbeta1
+        </div>
+
+        <button onclick="copiarKey()">
+            Copiar Key
+        </button>
+    </div>
+
+    <script>
+        function copiarKey() {
+            const key = document.getElementById("key").textContent.trim();
+
+            navigator.clipboard.writeText(key);
+
+            alert("Key copiada");
+        }
+    </script>
+
+</body>
+</html>
+```
+
